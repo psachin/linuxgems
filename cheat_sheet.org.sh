@@ -55,7 +55,9 @@ mount /dev/device_name /media/device_name
 umount /media/device_name
 
 # Forensically clone filesystems and do other low-level operations on files. Be careful with this one. Can be destructive:
-dd
+dd if=/dev/sdX of=<your_image_name.img> bs=<block_size>
+
+where X(in sdX) can be a,b,c,...
 
 # Work with disk partitions:
 parted
